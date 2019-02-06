@@ -1,7 +1,10 @@
 const json = window.localStorage.getItem('applicant');
-
-console.log(json);
-
 const hydrate = JSON.parse(json);
 
-console.log(hydrate);
+const tvShowNode = document.getElementById('tv-show');
+const abilityNode = document.getElementById('ability');
+const lastNameNode = document.getElementById('last-name');
+
+tvShowNode.textContent = hydrate.tvShow;
+abilityNode.textContent = hydrate.ability;
+lastNameNode.textContent = hydrate.lastName;
