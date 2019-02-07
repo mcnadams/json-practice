@@ -13,7 +13,12 @@ for(let index = 0; index < applicants.length; index++) {
     const tr = document.createElement('tr');
 
     const firstNameCell = document.createElement('td');
-    firstNameCell.textContent = applicant.firstName;
+    const link = document.createElement('a');
+    link.href = 'applicant-detail.html?name=' + encodeURIComponent(applicant.firstName);
+    link.textContent = applicant.firstName
+
+    
+    firstNameCell.appendChild(link);
     tr.appendChild(firstNameCell);
     
     const lastNameCell = document.createElement('td');
